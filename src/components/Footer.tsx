@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Plus, Mail, Heart } from "lucide-react";
+import { Plus } from "lucide-react";
 import { SITE } from "../data/projects";
 
 export default function Footer() {
@@ -30,34 +30,18 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-16">
-            <div>
-              <h4 className="mb-3 font-semibold text-white">Điều hướng</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link to="/" className="hover:text-brand-300">Giới thiệu</Link></li>
-                <li><Link to="/du-an" className="hover:text-brand-300">Dự án</Link></li>
-                <li><Link to="/tong-ket" className="hover:text-brand-300">Tổng kết</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="mb-3 font-semibold text-white">Liên hệ</h4>
-              <a
-                href={`mailto:${SITE.email}`}
-                className="inline-flex items-center gap-2 text-sm hover:text-brand-300"
-              >
-                <Mail className="h-4 w-4" /> {SITE.email}
-              </a>
-            </div>
+          <div>
+            <h4 className="mb-3 font-semibold text-white">Điều hướng</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/" className="hover:text-brand-300">Giới thiệu</Link></li>
+              <li><Link to="/du-an" className="hover:text-brand-300">Dự án</Link></li>
+              <li><Link to="/tong-ket" className="hover:text-brand-300">Tổng kết</Link></li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row">
-          <p>
-            © {SITE.year} {SITE.fullName} · {SITE.major}
-          </p>
-          <p className="inline-flex items-center gap-1.5">
-            Thực hiện với <Heart className="h-3.5 w-3.5 text-rose-400" /> bằng React + TypeScript
-          </p>
+        <div className="mt-12 border-t border-white/10 pt-6 text-xs text-slate-500">
+          <p>© {SITE.year} {SITE.fullName} · {SITE.major}</p>
         </div>
       </div>
     </footer>

@@ -217,29 +217,33 @@ export default function Home() {
             <SectionHead kicker="Dự án nổi bật" title="Sáu năng lực · Sáu dự án" />
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-4xl border-t border-brand-200 sm:grid-cols-2 sm:gap-x-14">
             {projects.map((p, i) => {
               const Icon = getIcon(p.icon);
               return (
-                <Reveal key={p.id} delay={(i % 3) * 0.1}>
+                <Reveal key={p.id} delay={(i % 2) * 0.08}>
                   <Link
                     to={`/du-an/${p.slug}`}
-                    className="group flex h-full flex-col border-t-2 border-brand-800 pt-5 transition-all hover:border-brand-500"
+                    className="group flex gap-5 border-b border-brand-100 py-6"
                   >
-                    <div className="flex items-center justify-between">
-                      <Icon className="h-6 w-6 text-brand-700" />
-                      <span className="font-display text-3xl font-semibold text-brand-100 transition-colors group-hover:text-brand-300">
-                        {String(p.id).padStart(2, "0")}
+                    <span className="font-display text-4xl font-semibold leading-none text-brand-200 transition-colors group-hover:text-brand-500">
+                      {String(p.id).padStart(2, "0")}
+                    </span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 text-brand-600">
+                        <Icon className="h-4 w-4" />
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.16em]">
+                          {p.task}
+                        </span>
+                      </div>
+                      <h3 className="mt-1.5 font-display text-xl font-semibold text-ink transition-colors group-hover:text-brand-800">
+                        {p.title}
+                      </h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">{p.short}</p>
+                      <span className="mt-2.5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition-all group-hover:gap-2.5">
+                        Xem chi tiết <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
-                    <span className="mt-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-600">
-                      {p.task}
-                    </span>
-                    <h3 className="mt-1 font-display text-xl font-semibold text-ink">{p.title}</h3>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">{p.short}</p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 transition-all group-hover:gap-2.5">
-                      Xem chi tiết <ArrowRight className="h-4 w-4" />
-                    </span>
                   </Link>
                 </Reveal>
               );
