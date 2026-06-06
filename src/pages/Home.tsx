@@ -90,9 +90,10 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.12 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-muted"
           >
-            Sinh viên <span className="font-semibold text-ink-soft">{SITE.major}</span> — hành
-            trình rèn luyện <span className="gradient-text">năng lực số</span>: quản lý dữ liệu,
-            khai thác thông tin học thuật và ứng dụng AI một cách có trách nhiệm.
+            Sinh viên <span className="font-semibold text-ink-soft">{SITE.major}</span>, đam mê
+            công nghệ và không ngừng học hỏi. Đây là nơi tôi lưu lại hành trình{" "}
+            <span className="gradient-text">làm chủ năng lực số</span> — từ tổ chức dữ liệu, tra
+            cứu thông tin học thuật, đến ứng dụng AI một cách thông minh và có trách nhiệm.
           </motion.p>
 
           <motion.div
@@ -132,24 +133,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== GIỚI THIỆU BẢN THÂN ===== */}
+      {/* ===== GIỚI THIỆU — Trang giới thiệu kiểu tạp chí ===== */}
       <section className="py-16">
         <div className="container-x">
-          <Reveal>
-            <SectionHead kicker="Về tôi" title="Giới thiệu bản thân" />
-          </Reveal>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {goals.map((g, i) => (
-              <Reveal key={g.title} delay={i * 0.1}>
-                <div className="border-t-2 border-brand-800 pt-5">
-                  <div className="flex items-center gap-2 text-brand-700">
-                    <g.icon className="h-5 w-5" />
-                    <h3 className="font-display text-xl font-semibold text-ink">{g.title}</h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">{g.body}</p>
+          <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:items-start">
+            {/* Bài giới thiệu có drop-cap */}
+            <Reveal>
+              <span className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-600">
+                Về tôi
+              </span>
+              <h2 className="mt-2 font-display text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+                Đôi dòng giới thiệu
+              </h2>
+              <div className="rule mt-5 w-24" />
+              <p className="mt-7 text-lg leading-relaxed text-ink-soft first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-display first-letter:text-7xl first-letter:font-semibold first-letter:leading-[0.8] first-letter:text-brand-700">
+                Tôi là {SITE.fullName}, sinh viên {SITE.major} tại {SITE.school}. Với tôi, môn
+                Năng lực số không chỉ là học cách dùng công cụ, mà là rèn một lối tư duy và làm
+                việc trong môi trường số: hiệu quả, cẩn trọng và có trách nhiệm.
+              </p>
+              <p className="mt-4 leading-relaxed text-ink-muted">{goals[1].body}</p>
+              <p className="mt-4 leading-relaxed text-ink-muted">{goals[2].body}</p>
+            </Reveal>
+
+            {/* Hồ sơ nhanh dạng danh sách */}
+            <Reveal delay={0.1}>
+              <aside className="border border-brand-200 bg-white p-7 shadow-soft">
+                <h3 className="font-display text-lg font-semibold text-ink">Hồ sơ</h3>
+                <div className="rule mb-5 mt-3" />
+                <div className="space-y-3.5 text-sm">
+                  <Fact label="Họ tên" value={SITE.fullName} />
+                  <Fact label="Ngành" value={SITE.major} />
+                  <Fact label="Trường" value={SITE.school} />
+                  <Fact label="Sở thích" value={SITE.hobbies} />
                 </div>
-              </Reveal>
-            ))}
+                <div className="mt-6 border-t border-brand-100 pt-5">
+                  <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-600">
+                    <Stethoscope className="h-3.5 w-3.5" /> Future Doctor
+                  </p>
+                  <p className="mt-2 font-display text-base italic text-ink-soft">
+                    "Học công nghệ để phục vụ con người tốt hơn."
+                  </p>
+                </div>
+              </aside>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -228,24 +254,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== CTA liêm chính ===== */}
-      <section className="pb-10 pt-6">
+      {/* ===== Cam kết liêm chính — kiểu tuyên ngôn có chữ ký ===== */}
+      <section className="py-16">
         <div className="container-x">
           <Reveal>
-            <div className="relative overflow-hidden rounded-2xl bg-brand-900 p-10 text-center text-paper sm:p-14">
-              <ShieldCheck className="relative mx-auto h-12 w-12 text-brand-300" />
-              <h2 className="relative mt-4 font-display text-3xl font-semibold">
-                Cam kết liêm chính học thuật
-              </h2>
-              <p className="relative mx-auto mt-3 max-w-2xl text-brand-100">
-                Toàn bộ Portfolio được thực hiện trung thực. Mọi nội dung tham khảo và công cụ
-                AI đều được ghi nguồn rõ ràng ở từng dự án.
+            <figure className="mx-auto max-w-3xl border-y-2 border-brand-800 py-12 text-center">
+              <ShieldCheck className="mx-auto h-9 w-9 text-brand-700" />
+              <p className="mt-6 font-display text-2xl font-medium italic leading-relaxed text-ink sm:text-[1.7rem]">
+                “Toàn bộ Portfolio này được thực hiện một cách trung thực. Mọi nội dung tham
+                khảo và công cụ AI đều được ghi nguồn rõ ràng ở từng dự án.”
               </p>
-            </div>
+              <figcaption className="mt-7">
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-600">
+                  Cam kết liêm chính học thuật
+                </span>
+                <span className="mt-2 block font-display text-2xl italic text-brand-800">
+                  — {SITE.fullName}
+                </span>
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </section>
     </>
+  );
+}
+
+function Fact({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex flex-col gap-1 border-b border-brand-100 pb-3 last:border-0 last:pb-0">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-600">
+        {label}
+      </span>
+      <span className="text-ink-soft">{value}</span>
+    </div>
   );
 }
 

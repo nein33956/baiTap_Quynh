@@ -25,12 +25,12 @@ export type Project = {
 };
 
 export const SITE = {
-  fullName: "Hoàng Thanh Trà",
+  fullName: "Phạm Như Quỳnh",
   major: "Ngành Y Khoa",
   school: "ĐH Y Dược - Đại học Quốc gia Hà Nội",
   year: "2026",
   email: "[email@cua.ban]",
-  hobbies: "Messi, đọc sách, đá bóng",
+  hobbies: "Đạp xe, bơi lội, nhậu",
 };
 
 export const projects: Project[] = [
