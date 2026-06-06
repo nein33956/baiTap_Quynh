@@ -40,7 +40,7 @@ const goals = [
   {
     icon: Target,
     title: "Mục tiêu học tập",
-    body: "Nắm vững năng lực số nền tảng phục vụ học tập & nghiên cứu y khoa: quản lý tài liệu khoa học, tra cứu thông tin đáng tin cậy, sử dụng AI hiệu quả và có đạo đức.",
+    body: "Nắm vững AI và công nghệ số nền tảng phục vụ học tập & nghiên cứu y khoa: quản lý tài liệu khoa học, tra cứu thông tin đáng tin cậy, sử dụng AI hiệu quả và có đạo đức.",
   },
   {
     icon: Rocket,
@@ -52,7 +52,7 @@ const goals = [
 const portfolioGoals = [
   "Thể hiện các kỹ năng số đã học qua 6 dự án thực hành cụ thể.",
   "Lưu trữ sản phẩm cá nhân có hệ thống, dễ truy cập & chia sẻ.",
-  "Ghi lại quá trình tự học và sự tiến bộ về năng lực số.",
+  "Ghi lại quá trình tự học và sự tiến bộ về AI và công nghệ số.",
   "Phản ánh tư duy học thuật: minh bạch nguồn, dùng AI có trách nhiệm.",
 ];
 
@@ -70,7 +70,7 @@ export default function Home() {
           >
             <span className="hidden h-px w-12 bg-brand-300 sm:block" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.32em] text-brand-700">
-              Portfolio cá nhân · Môn Năng lực số
+              Portfolio cá nhân · Môn AI và Công nghệ số
             </span>
             <span className="hidden h-px w-12 bg-brand-300 sm:block" />
           </motion.div>
@@ -92,7 +92,7 @@ export default function Home() {
           >
             Sinh viên <span className="font-semibold text-ink-soft">{SITE.major}</span>, đam mê
             công nghệ và không ngừng học hỏi. Đây là nơi tôi lưu lại hành trình{" "}
-            <span className="gradient-text">làm chủ năng lực số</span> — từ tổ chức dữ liệu, tra
+            <span className="gradient-text">làm chủ AI và công nghệ số</span> — từ tổ chức dữ liệu, tra
             cứu thông tin học thuật, đến ứng dụng AI một cách thông minh và có trách nhiệm.
           </motion.p>
 
@@ -148,7 +148,7 @@ export default function Home() {
               <div className="rule mt-5 w-24" />
               <p className="mt-7 text-lg leading-relaxed text-ink-soft first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-display first-letter:text-7xl first-letter:font-semibold first-letter:leading-[0.8] first-letter:text-brand-700">
                 Tôi là {SITE.fullName}, sinh viên {SITE.major} tại {SITE.school}. Với tôi, môn
-                Năng lực số không chỉ là học cách dùng công cụ, mà là rèn một lối tư duy và làm
+                AI và Công nghệ số không chỉ là học cách dùng công cụ, mà là rèn một lối tư duy và làm
                 việc trong môi trường số: hiệu quả, cẩn trọng và có trách nhiệm.
               </p>
               <p className="mt-4 leading-relaxed text-ink-muted">{goals[1].body}</p>
@@ -191,7 +191,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-ink-muted">
                 Portfolio là nơi tôi tổng hợp, hệ thống hóa kết quả học tập và thể hiện sự
-                trưởng thành về năng lực số trong suốt môn học.
+                trưởng thành về AI và công nghệ số trong suốt môn học.
               </p>
             </div>
             <ul className="space-y-1">

@@ -21,7 +21,7 @@ export default function Navbar() {
               P
             </span>
             <span className="font-display text-xl font-semibold tracking-tight text-ink">
-              Portfolio <span className="gradient-text">Năng lực số</span>
+              Portfolio <span className="gradient-text">AI và Công nghệ số</span>
             </span>
           </Link>
 

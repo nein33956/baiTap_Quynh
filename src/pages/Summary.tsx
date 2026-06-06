@@ -38,7 +38,7 @@ export default function Summary() {
               Nhìn lại <span className="gradient-text">hành trình</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-ink-muted">
-              Trải nghiệm, kiến thức và những điều đọng lại sau sáu dự án năng lực số.
+              Trải nghiệm, kiến thức và những điều đọng lại sau sáu dự án AI và công nghệ số.
             </p>
             <div className="rule mx-auto mt-6 w-24" />
           </Reveal>
@@ -54,7 +54,7 @@ export default function Summary() {
             </Reveal>
             <Reveal>
               <p className="text-lg leading-relaxed text-ink-soft first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:font-display first-letter:text-6xl first-letter:font-semibold first-letter:leading-[0.8] first-letter:text-brand-700">
-                Khi bắt đầu môn học, tôi từng nghĩ “năng lực số” chỉ đơn giản là biết dùng máy
+                Khi bắt đầu môn học, tôi từng nghĩ “AI và công nghệ số” chỉ đơn giản là biết dùng máy
                 tính. Nhưng đi hết sáu dự án, tôi nhận ra đó là cả một cách tư duy và làm việc
                 trong môi trường số — từ tổ chức dữ liệu, tìm và thẩm định thông tin, đến cộng
                 tác nhóm và sử dụng AI.
@@ -62,7 +62,7 @@ export default function Summary() {
 
               <blockquote className="my-9 border-y border-brand-200 py-7 text-center">
                 <p className="font-display text-2xl font-medium italic text-brand-800 sm:text-3xl">
-                  “Năng lực số không phải là biết bấm nút, mà là hiểu vì sao mình bấm.”
+                  “AI và Công nghệ số không phải là biết bấm nút, mà là hiểu vì sao mình bấm.”
                 </p>
               </blockquote>
 
@@ -176,7 +176,7 @@ export default function Summary() {
             <Reveal>
               <p className="mt-6 border-l-2 border-brand-700 pl-5 text-sm leading-relaxed text-ink-soft">
                 <b className="text-ink">Định hướng tiếp theo:</b> tôi sẽ tiếp tục rèn luyện kỹ
-                năng đánh giá nguồn và sáng tạo nội dung số, đồng thời ứng dụng năng lực số vào
+                năng đánh giá nguồn và sáng tạo nội dung số, đồng thời ứng dụng AI và công nghệ số vào
                 việc học ngành Y Khoa — tra cứu tài liệu, phác đồ điều trị và hỗ trợ nghiên cứu
                 khoa học một cách hiệu quả, có trách nhiệm.
               </p>
