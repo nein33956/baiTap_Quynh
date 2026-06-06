@@ -19,7 +19,8 @@ export type Project = {
   lmsUrl: string; // link trang bài trên LMS (cần đăng nhập) — để "" nếu chưa có
   submission: Submission | null; // thông tin bài đã nộp — null nếu chưa có
   requirementImg?: string; // (tuỳ chọn) ảnh chụp yêu cầu đề bài
-  proofImg?: string; // (tuỳ chọn) ảnh chụp minh chứng đã nộp
+  proofImgs?: string[]; // (tuỳ chọn) các ảnh chụp minh chứng đã nộp
+  viewUrl?: string; // (tuỳ chọn) link "Xem bài" (Google Tài liệu / Drive...)
   aiNote: string;
   lesson: string;
 };
@@ -30,7 +31,7 @@ export const SITE = {
   school: "ĐH Y Dược - Đại học Quốc gia Hà Nội",
   year: "2026",
   email: "[email@cua.ban]",
-  hobbies: "Đạp xe, bơi lội, nhậu",
+  hobbies: "Bơi lội, chạy bộ, đạp xe, leo núi",
 };
 
 export const projects: Project[] = [
@@ -47,7 +48,7 @@ export const projects: Project[] = [
     steps: [
       "Mở File Explorer (phím tắt Windows + E).",
       "Truy cập ổ đĩa/thư mục: This PC → ổ D: (hoặc thư mục Documents).",
-      "Tạo thư mục mới đặt tên: ThucHanh_HoangThanhTra.",
+      "Tạo thư mục mới đặt tên: ThucHanh_PhamNhuQuynh.",
       "Vào thư mục vừa tạo.",
       "Tạo tệp văn bản GhiChu.txt (New → Text Document).",
       "Đổi tên tệp thành GhiChuQuanTrong.txt (Rename).",
@@ -59,16 +60,17 @@ export const projects: Project[] = [
       "Khôi phục GhiChuQuanTrong.txt từ Thùng rác (Restore).",
     ],
     tools: ["Windows", "File Explorer"],
-    lmsUrl:
-      "https://lms.vnu.edu.vn/learn/lop-hoc/chi-tiet/09600b64-537c-43d3-a190-5f54527d21ec",
+    lmsUrl: "",
     submission: {
-      fileName: "hoang-thanh-tra.docx",
-      submittedAt: "09/03/2026 · 11:48",
+      fileName: "Bài làm Bài 1 (Google Tài liệu)",
+      submittedAt: "08/03/2026 · 14:06",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260309/tmpkrvxdi_hoang-thanh-tra.docx",
+      fileUrl: "",
     },
-    proofImg: "/img/bai1-minhchung.jpg",
+    requirementImg: "/img/bai1-yeucau.jpg",
+    proofImgs: ["/img/bai1-mc1.jpg", "/img/bai1-mc2.jpg"],
+    viewUrl:
+      "https://docs.google.com/document/d/1UnGkua4Z4WJ2yB_so4FWna80JtYt5cjA6NeteF2sCgk/edit?usp=sharing",
     aiNote:
       "Bài tập thực hành thao tác trực tiếp trên hệ điều hành Windows, không sử dụng công cụ AI. Toàn bộ ảnh minh hoạ trong bài nộp do chính tôi chụp màn hình trong quá trình thực hiện.",
     lesson:
@@ -95,13 +97,15 @@ export const projects: Project[] = [
     tools: ["Google Scholar", "Microsoft Academic", "Định dạng Harvard"],
     lmsUrl: "",
     submission: {
-      fileName: "bai2_hoangthanhtra-.docx",
-      submittedAt: "22/03/2026 · 20:01",
+      fileName: "bt-22.pdf",
+      submittedAt: "22/03/2026 · 10:54",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260322/tmpd0phtv_bai2_hoangthanhtra-.docx",
+      fileUrl: "",
     },
-    proofImg: "/img/bai2-minhchung.jpg",
+    requirementImg: "/img/bai2-yeucau.jpg",
+    proofImgs: ["/img/bai2-mc1.jpg"],
+    viewUrl:
+      "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100132/20260322/tmpiqdpzo_bt-22.pdf",
     aiNote:
       "Toàn bộ tài liệu tham khảo được trích dẫn theo định dạng Harvard. Việc đánh giá và xếp hạng độ tin cậy của từng nguồn do tôi tự thực hiện dựa trên các tiêu chí học thuật.",
     lesson:
@@ -128,13 +132,15 @@ export const projects: Project[] = [
     tools: ["ChatGPT", "Prompt Engineering", "Few-shot / Chain-of-thought"],
     lmsUrl: "",
     submission: {
-      fileName: "bai4_prompt_engineering_vn.docx",
-      submittedAt: "05/04/2026 · 20:29",
+      fileName: "bt-32.pdf",
+      submittedAt: "31/03/2026 · 18:19",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260405/tmpquhav8_bai4_prompt_engineering_vn.docx",
+      fileUrl: "",
     },
-    proofImg: "/img/bai3-minhchung.jpg",
+    requirementImg: "/img/bai3-yeucau.jpg",
+    proofImgs: ["/img/bai3-mc1.jpg"],
+    viewUrl:
+      "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100132/20260331/tmpoigidn_bt-32.pdf",
     aiNote:
       "Bài tập có sử dụng công cụ AI (ChatGPT) để thử nghiệm và so sánh các phiên bản prompt. Toàn bộ prompt, kết quả AI và phần phân tích đều được trình bày minh bạch trong báo cáo.",
     lesson:
@@ -160,12 +166,15 @@ export const projects: Project[] = [
     tools: ["Trello", "Google Docs", "Google Drive", "Microsoft Teams"],
     lmsUrl: "",
     submission: {
-      fileName: "bai5_hoptactructuyen.pdf",
-      submittedAt: "18/04/2026",
+      fileName: "bai-tap-43.pdf",
+      submittedAt: "19/04/2026 · 22:47",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260418/tmplpuqun_bai5_hoptactructuyen202pdf.pdf",
+      fileUrl: "",
     },
+    requirementImg: "/img/bai4-yeucau.jpg",
+    proofImgs: ["/img/bai4-mc1.jpg"],
+    viewUrl:
+      "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100132/20260419/tmp2kqwv3_bai-tap-43.pdf",
     aiNote:
       "Báo cáo phản ánh trải nghiệm hợp tác thực tế của cá nhân; minh chứng (ảnh chụp màn hình) thể hiện rõ tài khoản và phần đóng góp của tôi trong dự án nhóm.",
     lesson:
@@ -192,13 +201,15 @@ export const projects: Project[] = [
     tools: ["ChatGPT", "DALL·E", "Canva AI", "Adobe Firefly"],
     lmsUrl: "",
     submission: {
-      fileName: "bai-tap.docx",
-      submittedAt: "03/05/2026 · 20:59",
+      fileName: "bt-5.pdf",
+      submittedAt: "03/05/2026 · 22:00",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260503/tmppqa9xv_bai-tap.docx",
+      fileUrl: "",
     },
-    proofImg: "/img/bai5-minhchung.jpg",
+    requirementImg: "/img/bai5-yeucau.jpg",
+    proofImgs: ["/img/bai5-mc1.jpg"],
+    viewUrl:
+      "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100132/20260503/tmpj7opyd_bt-5.pdf",
     aiNote:
       "Bài tập sử dụng nhiều công cụ AI tạo sinh (văn bản, hình ảnh, thiết kế). Toàn bộ prompt, đầu ra AI và phần chỉnh sửa/đóng góp cá nhân đều được ghi lại minh bạch; bài có phần phân tích riêng về các vấn đề đạo đức khi sử dụng AI.",
     lesson:
@@ -225,13 +236,15 @@ export const projects: Project[] = [
     tools: ["ChatGPT", "Canva (infographic)", "Trích dẫn học thuật"],
     lmsUrl: "",
     submission: {
-      fileName: "bai6_ai_cotrachnhiem.docx",
-      submittedAt: "24/05/2026 · 13:16",
+      fileName: "bao-cao.pdf",
+      submittedAt: "17/05/2026 · 22:54",
       status: "Đã nộp · Đang chờ chấm",
-      fileUrl:
-        "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100161/20260524/tmpo13oj3_bai6_ai_cotrachnhiem.docx",
+      fileUrl: "",
     },
-    proofImg: "/img/bai6-minhchung.jpg",
+    requirementImg: "/img/bai6-yeucau.jpg",
+    proofImgs: ["/img/bai6-mc1.jpg"],
+    viewUrl:
+      "https://cdnlms.vnu.edu.vn/dhqg.file.api/uploads/lms/document/22100132/20260517/tmposy5ue_bao-cao.pdf",
     aiNote:
       "Bài tập trực tiếp về sử dụng AI có trách nhiệm: mọi prompt và đầu ra AI đều được ghi lại và trích dẫn minh bạch. Bài có bộ nguyên tắc cá nhân và phân tích ranh giới giữa hỗ trợ hợp lý và gian lận học thuật.",
     lesson:
